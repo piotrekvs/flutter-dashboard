@@ -199,7 +199,15 @@ class _DashboardState<T extends DashboardItem> extends State<Dashboard<T>>
   ///
   @override
   void initState() {
-    _layoutController = _DashboardLayoutController<T>();
+    _layoutController = _DashboardLayoutController<T>(
+      itemController: widget.dashboardItemController,
+      animateEverytime: widget.animateEverytime,
+      axis: Axis.vertical,
+      shrinkOnMove: widget.editModeSettings.shrinkOnMove,
+      shrinkToPlace: widget.shrinkToPlace,
+      slideToTop: widget.slideToTop,
+      slotCount: widget.slotCount,
+    );
     _layoutController.addListener(() {
       setState(() {});
     });
