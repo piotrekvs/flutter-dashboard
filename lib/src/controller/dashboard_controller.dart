@@ -208,9 +208,9 @@ class DashboardItemController<T extends DashboardItem> with ChangeNotifier {
 //   return _layoutController!.mountToTop(id);
 // }
 //
-// void slideToTopAll() {
-//   return _layoutController!._slideToTopAll();
-// }
+  void slideToTopAll() {
+    return _layoutController!._slideToTopAll();
+  }
 }
 
 ///
